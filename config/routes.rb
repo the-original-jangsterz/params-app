@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   post '/form_result' => 'params#form_params_result'
 
   get '/guessing_game' => 'params#game'
+  get '/form_game_show' => 'params#form_game_show'
+  post '/form_game_result' => 'params#form_game_result'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

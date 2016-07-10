@@ -32,4 +32,21 @@ class ParamsController < ApplicationController
     end
     render 'game.html.erb'
   end
+
+  def form_game_show
+    render 'form_game_show.html.erb'
+  end
+
+  def form_game_result
+    winning_number = 32
+    user_guess = params['input_number'].to_i
+    if user_guess > winning_number
+      @game_message = "WRONG! Try something lower..."
+    elsif user_guess < winning_number
+      @game_message = "WRONG! Try something higher..."
+    else
+      @game_message = "You win!"
+    end
+    render 'form_game_result.html.erb'
+  end
 end
