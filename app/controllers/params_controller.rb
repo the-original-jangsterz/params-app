@@ -10,6 +10,15 @@ class ParamsController < ApplicationController
     render 'url.html.erb'
   end
 
+  def form_params_show
+    render 'form_show.html.erb'
+  end
+
+  def form_params_result
+    @message = params["form_message"]
+    render 'form_result.html.erb'
+  end
+
   def game
     @user_name = params["name"]
     winning_number = 32

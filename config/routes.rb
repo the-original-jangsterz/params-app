@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get '/query_params_example' => 'params#query_params'
   get '/url_segment_params_example/:my_message' => 'params#url_params'
+  get '/form_show' => 'params#form_params_show'
+  post '/form_result' => 'params#form_params_result'
 
   get '/guessing_game' => 'params#game'
   # The priority is based upon order of creation: first created -> highest priority.
