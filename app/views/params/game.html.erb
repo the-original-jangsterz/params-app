@@ -1,0 +1,7 @@
+<h1>Hello: Your name is </h1>
+<p><%= @user_name %></p>
+<% if @user_name.upcase.starts_with?("A") %>
+  <%= "Hey your name starts with the letter a" %>
+<% end %>
+<h1>Welcome to the guessing game!</h1>
+<p><%= @game_message %></p>
